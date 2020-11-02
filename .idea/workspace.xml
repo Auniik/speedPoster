@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="177d0e85-9bbb-40df-9640-d45c2445e2ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Manager/Action/PersistController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tmp/success_logs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/firstbd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/firstbd.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helpers/file.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/file.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/Action/PersistController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Action/PersistController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/Spreadsheet/SpreadSheetParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Spreadsheet/SpreadSheetParser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/ExcelFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/RequestSanitizer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/platform_check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tmp/rows.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/tmp/rows.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604257749651</updated>
       <workItem from="1604257750754" duration="17897000" />
-      <workItem from="1604333955660" duration="23020000" />
+      <workItem from="1604333955660" duration="23852000" />
     </task>
     <servers />
   </component>

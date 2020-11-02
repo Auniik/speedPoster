@@ -39,6 +39,8 @@ class PersistController
 
                 $log = "[" . date('Y-m-d h:i:s'). "] $k - Status: Success, Code: $status " .  PHP_EOL;
 
+                        var_dump($body->getContents());
+//        die();
                 echo $log;
 
                 if ($status > 200) {

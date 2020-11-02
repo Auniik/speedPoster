@@ -55,7 +55,7 @@ class SpreadSheetParser
                         self::$attributes[$k] => $this->parseDate($elem, $identity)
                     ];
                 }
-                if (in_array($identity, [12, 13])) {
+                if (in_array($k, [13, 12])) {
                     return [
                         self::$attributes[$k] => $this->parseInteger($elem)
                     ];
