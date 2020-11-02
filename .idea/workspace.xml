@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="177d0e85-9bbb-40df-9640-d45c2445e2ef" name="Default Changelist" comment="" />
+    <list default="true" id="177d0e85-9bbb-40df-9640-d45c2445e2ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Manager/Action/PersistController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tmp/success_logs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/firstbd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/firstbd.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Helpers/file.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/file.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/Spreadsheet/SpreadSheetParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Spreadsheet/SpreadSheetParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/ExcelFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/RequestSanitizer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/platform_check.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -18,7 +40,23 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/shuchkin/simplexlsx" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="1jhYNQh8OsiEU8k5frXNH4PeXE6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -27,18 +65,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
-      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -49,6 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604257749651</updated>
       <workItem from="1604257750754" duration="17897000" />
+      <workItem from="1604333955660" duration="23020000" />
     </task>
     <servers />
   </component>
@@ -56,22 +91,34 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="329" y="100" width="696" height="546" key="NewPhpClassDialog" timestamp="1604269840442">
+    <state x="22" y="234" width="1312" height="291" key="#SQL_Dialects" timestamp="1604346012610">
       <screen x="0" y="22" width="1366" height="746" />
     </state>
-    <state x="329" y="100" width="696" height="546" key="NewPhpClassDialog/0.22.1366.746@0.22.1366.746" timestamp="1604269840442" />
-    <state x="496" y="307" width="363" height="145" key="NewPhpFileDialog" timestamp="1604267920117">
+    <state x="22" y="234" width="1312" height="291" key="#SQL_Dialects/0.22.1366.746@0.22.1366.746" timestamp="1604346012610" />
+    <state x="278" y="42" width="800" height="675" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604346025600">
       <screen x="0" y="22" width="1366" height="746" />
     </state>
-    <state x="496" y="307" width="363" height="145" key="NewPhpFileDialog/0.22.1366.746@0.22.1366.746" timestamp="1604267920117" />
+    <state x="278" y="42" width="800" height="675" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.22.1366.746@0.22.1366.746" timestamp="1604346025600" />
+    <state x="329" y="100" width="696" height="546" key="NewPhpClassDialog" timestamp="1604337524320">
+      <screen x="0" y="22" width="1366" height="746" />
+    </state>
+    <state x="329" y="100" width="696" height="546" key="NewPhpClassDialog/0.22.1366.746@0.22.1366.746" timestamp="1604337524320" />
+    <state x="496" y="307" width="353" height="145" key="NewPhpFileDialog" timestamp="1604340130136">
+      <screen x="0" y="22" width="1366" height="746" />
+    </state>
+    <state x="496" y="307" width="353" height="145" key="NewPhpFileDialog/0.22.1366.746@0.22.1366.746" timestamp="1604340130136" />
+    <state x="377" y="101" width="611" height="560" key="find.popup" timestamp="1604345818283">
+      <screen x="0" y="22" width="1366" height="746" />
+    </state>
+    <state x="377" y="101" width="611" height="560" key="find.popup/0.22.1366.746@0.22.1366.746" timestamp="1604345818283" />
     <state x="519" y="145" width="317" height="470" key="refactoring.ChangeSignatureDialog" timestamp="1604270916782">
       <screen x="0" y="22" width="1366" height="746" />
     </state>
     <state x="519" y="145" width="317" height="470" key="refactoring.ChangeSignatureDialog/0.22.1366.746@0.22.1366.746" timestamp="1604270916782" />
-    <state x="347" y="168" key="run.anything.popup" timestamp="1604264715695">
+    <state x="347" y="168" key="run.anything.popup" timestamp="1604346583573">
       <screen x="0" y="22" width="1366" height="746" />
     </state>
-    <state x="347" y="168" key="run.anything.popup/0.22.1366.746@0.22.1366.746" timestamp="1604264715695" />
+    <state x="347" y="168" key="run.anything.popup/0.22.1366.746@0.22.1366.746" timestamp="1604346583573" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604262153528">
       <screen x="0" y="22" width="1366" height="746" />
     </state>

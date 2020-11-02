@@ -12,3 +12,15 @@ if (!function_exists('base_path')) {
         return $path ? $path : '';
     }
 }
+
+if (!function_exists('json_logger')) {
+    function json_logger($data, $path = '') {
+
+        if (is_array($data)) {
+            $data = json_encode($data);
+        }
+
+        $logger_file = base_path('src/tmp') . 'rows.json';
+        file_put_contents($logger_file, $data);
+    }
+}
