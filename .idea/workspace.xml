@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="177d0e85-9bbb-40df-9640-d45c2445e2ef" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1jhYNQh8OsiEU8k5frXNH4PeXE6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
+      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="177d0e85-9bbb-40df-9640-d45c2445e2ef" name="Default Changelist" comment="" />
+      <created>1604257749651</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604257749651</updated>
+      <workItem from="1604257750754" duration="17897000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="329" y="100" width="696" height="546" key="NewPhpClassDialog" timestamp="1604269840442">
+      <screen x="0" y="22" width="1366" height="746" />
+    </state>
+    <state x="329" y="100" width="696" height="546" key="NewPhpClassDialog/0.22.1366.746@0.22.1366.746" timestamp="1604269840442" />
+    <state x="496" y="307" width="363" height="145" key="NewPhpFileDialog" timestamp="1604267920117">
+      <screen x="0" y="22" width="1366" height="746" />
+    </state>
+    <state x="496" y="307" width="363" height="145" key="NewPhpFileDialog/0.22.1366.746@0.22.1366.746" timestamp="1604267920117" />
+    <state x="519" y="145" width="317" height="470" key="refactoring.ChangeSignatureDialog" timestamp="1604270916782">
+      <screen x="0" y="22" width="1366" height="746" />
+    </state>
+    <state x="519" y="145" width="317" height="470" key="refactoring.ChangeSignatureDialog/0.22.1366.746@0.22.1366.746" timestamp="1604270916782" />
+    <state x="347" y="168" key="run.anything.popup" timestamp="1604264715695">
+      <screen x="0" y="22" width="1366" height="746" />
+    </state>
+    <state x="347" y="168" key="run.anything.popup/0.22.1366.746@0.22.1366.746" timestamp="1604264715695" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604262153528">
+      <screen x="0" y="22" width="1366" height="746" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.22.1366.746@0.22.1366.746" timestamp="1604262153528" />
+  </component>
+</project>
