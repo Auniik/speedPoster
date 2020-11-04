@@ -10,7 +10,7 @@ use GuzzleHttp\Exception\GuzzleException;
 class PersistController
 {
     private array $rows;
-    private string $url = 'http://firstbd.test/test.php';
+    private string $url = 'http://firstbd.test/mysqli_test.php';
 
     public function __construct(array $rows)
     {

@@ -48,6 +48,10 @@ class SpreadSheetParser
     public function handle(array $rows)
     {
         $callback = fn ($row, $i)  =>  array_merge(
+            [
+                '_token' => "",
+                'save' => ""
+            ],
             ...array_map( function ($elem, $k) use ($i) {
                 $identity = $i + 1;
                 if ($k == 1) {

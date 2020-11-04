@@ -41,7 +41,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"> First Security Integrated Solutions Ltd.</a>
+            <a class="navbar-brand" href="clone.html"> First Security Integrated Solutions Ltd.</a>
         </div>
         <ul class="nav navbar-top-links navbar-right">
             <li class="dropdown">
@@ -124,7 +124,7 @@
                 <!----Message Insert Successfully------------->
                 <div class="row">
                     <div class="col-md-3 col-md-offset-0">
-                        <form method="post" action="post.php" accept-charset="UTF-8">
+                        <form method="post" action="tess.php" accept-charset="UTF-8">
                             <input name="_token" type="hidden" value="">
                             <div class="form-group">
                                 <label class="l1">Record No.</label>
@@ -252,51 +252,55 @@
     <script src="https://firstbd.ltd/work/dist/js/sb-admin-2.js"></script>
 </form>
 <script>
-	// const data = [
-	// 	{
-	// 		"record_no": "B98CS",
-	// 		"policy_date": "2010-11-21",
-	// 		"policy_no": "981FC6CCF2574",
-	// 		"medical_card_no": "178391",
-	// 		"first_name": "Kulbir",
-	// 		"last_name": "Chiller",
-	// 		"city": "New Delhi",
-	// 		"state": "Delhi",
-	// 		"phone": "116535471",
-	// 		"martial_status": "Single",
-	// 		"general_practitioner_code": "6B5C029924B24C2A",
-	// 		"hospital_claim_days": "1",
-	// 		"paid_amount": "0",
-	// 		"net_amount": "512"
-	// 	},
-	// 	{
-	// 		"record_no": "AB77B",
-	// 		"policy_date": "2065-03-11",
-	// 		"policy_no": "981FC6CCF2574",
-	// 		"medical_card_no": "178391",
-	// 		"first_name": "Bharat",
-	// 		"last_name": "Dua",
-	// 		"city": "New Deihl",
-	// 		"state": "Delhi",
-	// 		"phone": "116535471",
-	// 		"martial_status": "Single",
-	// 		"general_practitioner_code": "55750107C7E64AE6",
-	// 		"hospital_claim_days": "1",
-	// 		"paid_amount": "0",
-	// 		"net_amount": "512"
-	// 	}
-	// ];
-    //
-	// call_recursive_ajax();
-	// function call_recursive_ajax(i = 0) {
-	// 	if (i === 300) { return; }
-	// 	if (Object.keys(data[i]).length) {
-	// 		$.post("test.php", data[i]).done(function( data ) {
-    //             console.log(data)
-    //             call_recursive_ajax(i + 1)
-    //         }).catch(response => console.log(response));
-    //     }
-	// }
+	const data = [
+		{
+			"_token": "",
+			"record_no": "B98CS",
+			"policy_date": "2010-11-21",
+			"policy_no": "981FC6CCF2574",
+			"medical_card_no": "178391",
+			"first_name": "Kulbir",
+			"last_name": "Chiller",
+			"city": "New Delhi",
+			"state": "Delhi",
+			"phone": "116535471",
+			"martial_status": "Single",
+			"general_practitioner_code": "6B5C029924B24C2A",
+			"hospital_claim_days": "1",
+			"paid_amount": "0",
+			"net_amount": "512"
+		},
+		{
+			"_token": "",
+			"record_no": "AB77B",
+			"policy_date": "2065-03-11",
+			"policy_no": "981FC6CCF2574",
+			"medical_card_no": "178391",
+			"first_name": "Bharat",
+			"last_name": "Dua",
+			"city": "New Deihl",
+			"state": "Delhi",
+			"phone": "116535471",
+			"martial_status": "Single",
+			"general_practitioner_code": "55750107C7E64AE6",
+			"hospital_claim_days": "1",
+			"paid_amount": "0",
+			"net_amount": "512"
+		}
+	];
+
+	call_r_insert();
+	function call_r_insert(i = 0) {
+		if (i === data.length) { return; }
+		if (Object.keys(data[i]).length) {
+			$.post('insert.php', data[i]).done(function( response ) {
+				console.log('Success: ' + i)
+				call_r_insert(i + 1)
+            }).catch(function (response) {
+				console.log('Failed for ' + i + ' Response: ' + response);
+		    });
+        }
+	}
 
 </script>
 </body>

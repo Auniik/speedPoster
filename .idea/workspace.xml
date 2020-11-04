@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="177d0e85-9bbb-40df-9640-d45c2445e2ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tmp/rows.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/clone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/Action/PersistController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Action/PersistController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/Spreadsheet/SpreadSheetParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Spreadsheet/SpreadSheetParser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tmp/rows.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/tmp/rows.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/mysqli_test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +56,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -66,7 +74,8 @@
       <option name="presentableId" value="Default" />
       <updated>1604257749651</updated>
       <workItem from="1604257750754" duration="17897000" />
-      <workItem from="1604333955660" duration="23852000" />
+      <workItem from="1604333955660" duration="24232000" />
+      <workItem from="1604427351837" duration="6602000" />
     </task>
     <servers />
   </component>
@@ -90,6 +99,10 @@
       <screen x="0" y="22" width="1366" height="746" />
     </state>
     <state x="496" y="307" width="353" height="145" key="NewPhpFileDialog/0.22.1366.746@0.22.1366.746" timestamp="1604340130136" />
+    <state x="179" y="22" key="SettingsEditor" timestamp="1604428414895">
+      <screen x="0" y="22" width="1366" height="746" />
+    </state>
+    <state x="179" y="22" key="SettingsEditor/0.22.1366.746@0.22.1366.746" timestamp="1604428414895" />
     <state x="377" y="101" width="611" height="560" key="find.popup" timestamp="1604345818283">
       <screen x="0" y="22" width="1366" height="746" />
     </state>
@@ -102,9 +115,9 @@
       <screen x="0" y="22" width="1366" height="746" />
     </state>
     <state x="347" y="168" key="run.anything.popup/0.22.1366.746@0.22.1366.746" timestamp="1604346583573" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604262153528">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604434050577">
       <screen x="0" y="22" width="1366" height="746" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.22.1366.746@0.22.1366.746" timestamp="1604262153528" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.22.1366.746@0.22.1366.746" timestamp="1604434050577" />
   </component>
 </project>
