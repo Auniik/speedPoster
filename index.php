@@ -20,10 +20,12 @@ echo "Data generated... \n";
 
 $logger_file = __DIR__ . DIRECTORY_SEPARATOR . 'script.js';
 
-$script = "const data = $data; \n call_r_insert();
+$script = "const data = $data; \n 
+    call_r_insert();
 	function call_r_insert(i = 0) {
 	    let serial = Number(i) + 1;
-		if (i === data.length) { return; }
+        if (data.length > 300) { console.log('Please check the xlsx file, You entered more than 300 data.'); return; }
+		if (i === data.length) { console.log('Transaction finished!'); return; }
 		if (Object.keys(data[i]).length) {
 			$.post('insert.php', data[i]).done(function( response ) {
 				console.log('Success: ' +  serial)

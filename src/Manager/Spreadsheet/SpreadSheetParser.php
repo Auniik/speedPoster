@@ -11,6 +11,7 @@ class SpreadSheetParser
         'city', 'state', 'phone', 'martial_status', 'general_practitioner_code', 'hospital_claim_days',
         'paid_amount', 'net_amount'
     ];
+    protected $config;
 
     protected static array $stringParser = [
         'A' => 8,
@@ -47,6 +48,7 @@ class SpreadSheetParser
 
     public function handle(array $rows)
     {
+        $this->getConfig();
         $callback = fn ($row, $i)  =>  array_merge(
             [
                 '_token' => "",
@@ -76,15 +78,14 @@ class SpreadSheetParser
 
     public function parseDate(string $date, $i)
     {
-        $data = file_get_contents(base_path('src') . 'config.json');
-        $configs = json_decode($data);
+        $configs = $this->config;
 
         foreach ($configs->ranges as $v) {
 
             if (($i >= $v->start) && ($i <= $v->end)) {
-                return $v->date;
+                $date =  $v->date;
             }
-            return $configs->default_date;
+
         }
         return $date;
     }
@@ -95,12 +96,26 @@ class SpreadSheetParser
             return strtr($elem, self::$stringParser);
         }
 
-        return (int) $elem;
+        if (!trim($elem)) {
+            return 0;
+        }
+
+        return $elem;
     }
 
     private function parseString($elem)
     {
-        return preg_replace('/[^a-zA-Z0-9_ -]/s','',$elem);
+        $data = trim(preg_replace('/[^a-zA-Z0-9_ -]/s','',$elem));
+        if (!$data) {
+            return 0;
+        }
+
+        return $data;
+    }
+
+    public function getConfig()
+    {
+        $this->config = json_decode(file_get_contents(base_path('src') . 'config.json'));
     }
 
 }
