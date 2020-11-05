@@ -52,11 +52,19 @@ class SpreadSheetManager
     public function validate()
     {
         $f = $this->f;
+
+
         if (!count($f)) {
-            die('file not found');
+            die('file not found!');
         }
         if (!isset($f['file'])) {
-            die('File not found');
+            die('File not found!');
+        }
+
+        if ($ext = pathinfo($f['file']['name'], PATHINFO_EXTENSION)) {
+            if (in_array($ext, ['xlsx'])) {
+                die('Invalid File Type!');
+            }
         }
         return true;
     }

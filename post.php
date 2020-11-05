@@ -8,6 +8,7 @@ require 'vendor/autoload.php';
 require 'src/Helpers/file.php';
 
 
+//print_r($_POST);
 
 $xlsx = new SpreadSheetManager($_FILES);
 $rows = $xlsx->parse();
@@ -15,7 +16,7 @@ $rows = $xlsx->parse();
 //(new PersistController($rows))->handle();
 
 $data = json_encode($rows);
-echo "Data generated... \n";
+//echo "Data generated... \n";
 
 
 $logger_file = __DIR__ . DIRECTORY_SEPARATOR . 'script.js';
@@ -39,4 +40,4 @@ $script = "const data = $data; \n
 	}";
 
 file_put_contents($logger_file, $script);
-echo "Script generated...";
+echo $script;

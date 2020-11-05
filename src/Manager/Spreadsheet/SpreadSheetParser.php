@@ -110,12 +110,27 @@ class SpreadSheetParser
             return 0;
         }
 
+        if ($data == 'Triple') {
+            return 'Married';
+        }
+
         return $data;
     }
 
     public function getConfig()
     {
-        $this->config = json_decode(file_get_contents(base_path('src') . 'config.json'));
+        $array = [
+            'ranges' => []
+        ];
+        foreach ($_POST['start'] as $k => $value) {
+            array_push($array['ranges'], (object)[
+                'start' => $value, 'end' => $_POST['end'][$k], 'date' => $_POST['date'][$k]
+            ]);
+        }
+
+        $this->config =  (object)$array;
+
+//        $this->config = json_decode(file_get_contents(base_path('src') . 'config.json'));
     }
 
 }
