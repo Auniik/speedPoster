@@ -14,7 +14,6 @@
     "require": {
         "shuchkin/simplexlsx": "^0.8.19",
         "ext-json": "*",
-        "guzzlehttp/guzzle": "^7.2",
-        "ext-mysqli": "*"
+        "guzzlehttp/guzzle": "^7.2"
     }
 }

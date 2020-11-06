@@ -1,3 +1,13 @@
+<?php
+
+require 'vendor/autoload.php';
+var_dump(\src\Manager\Client\Client::get_os());
+   var_dump(\src\Manager\Client\Client::get_browser());
+   var_dump(\src\Manager\Client\Client::get_device());
+   var_dump(\src\Manager\Client\Client::get_ip());
+die();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +34,8 @@
     </style>
 </head>
 <body>
+
+
 
 <!-- `.container` is main centered wrapper -->
 <div class="container">
