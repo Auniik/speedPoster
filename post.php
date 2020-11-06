@@ -1,14 +1,19 @@
 <?php
 
 
-use src\Manager\Action\PersistController;
+//use src\Manager\Action\PersistController;
 use src\Manager\Spreadsheet\SpreadSheetManager;
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    throw new Exception;
+}
 
 require 'vendor/autoload.php';
 require 'src/Helpers/file.php';
 
 
-//print_r($_POST);
+ini_set('log_errors',1);
+ini_set('error_log','./src/tmp/log.log');
 
 $xlsx = new SpreadSheetManager($_FILES);
 $rows = $xlsx->parse();
@@ -20,24 +25,11 @@ $data = json_encode($rows);
 
 
 $logger_file = __DIR__ . DIRECTORY_SEPARATOR . 'script.js';
+$injector_file = __DIR__ . DIRECTORY_SEPARATOR . 'injector.js';
 
-$script = "const data = $data; \n 
-    call_r_insert();
-	function call_r_insert(i = 0) {
-	    let serial = Number(i) + 1;
-        if (data.length > 300) { console.log('Please check the xlsx file, You entered more than 300 data.'); return; }
-		if (i === data.length) { console.log('Transaction finished!'); return; }
-		if (Object.keys(data[i]).length) {
-			$.post('insert.php', data[i]).done(function( response ) {
-				console.log('Success: ' +  serial)
-				call_r_insert(serial)
-            }).catch(function (response) {
-				console.log('Failed for ' + serial + ' Response: ' + response);
-		    });
-        } else {
-            console.log('Data not found for: ' + serial )
-        }
-	}";
+$injector_script = file_get_contents($injector_file);
+
+$script = "const data = $data;\n$injector_script";
 
 file_put_contents($logger_file, $script);
 echo $script;

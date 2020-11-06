@@ -5,35 +5,34 @@
     <title>🍻 SpeedPoster</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" rel="stylesheet">
-
     <!-- CSS Reset -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
-
     <!-- Milligram CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css" rel="stylesheet">
-    <script
-            src="https://code.jquery.com/jquery-3.5.1.min.js"
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
             crossorigin="anonymous"></script>
-    <!-- You should properly set the path from the main file. -->
-
     <style>
         #file {
-            box-shadow: 0px 3px 11px 0px #d8d8d8;
+            box-shadow: 0 3px 11px 0 #d8d8d8;
             padding: 8px;
+            width: 70%;
         }
         button, input, textarea {
-            box-shadow: 0px 3px 11px 0px #d8d8d8;
+            box-shadow: 0 3px 11px 0 #d8d8d8;
         }
     </style>
 </head>
 <body>
 
 <!-- `.container` is main centered wrapper -->
-<div class="container d-flex">
+<div class="container">
 
-    <h3>SpeedPoster 🍻</h3>
+    <div class="row">
+        <h3 class="column">SpeedPoster 🍻</h3>
+    </div>
 
+    <br>
     <div class="row">
         <div class="column column-offset-25 column-75">
             <label for="file"> Choose .xlsx file here</label>
@@ -77,7 +76,7 @@
         </div>
 
         <div class="row">
-            <div class="column column-offset-25">
+            <div class="column column-offset-25 buttons-block">
                 <button   class="button submitButton" >Generate</button>
             </div>
         </div>
@@ -92,125 +91,19 @@
                 <button onclick="copy()" class="button button-clear">Copy</button>
             </div>
 
-            <textarea
-                    id="script"
+            <textarea id="script"
                     placeholder="Copy this script and paste it into console where you want to inject it..."
-                    style="height: 440px"></textarea>
+                    style="height: 550px"></textarea>
 
         </div>
     </div>
 
 </div>
-
-<script>
-    (function () {
-	    $('.addBtn').click( function (e) {
-	    	const block = $(e.target).parents('#dateFixBlock')
-            const rows = block.find('.dateFixRow');
-            const lastRow = rows.last()
-
-            let start =  $(lastRow).find('.start').val()
-            let end =  $(lastRow).find('.end').val()
-            let date =  $(lastRow).find('.date').val()
-
-
-		    if (!start) {
-			    alert('Please enter start count')
-			    return;
-		    }
-		    if (!end) {
-			    alert('Please enter end count')
-			    return;
-		    }
-
-            if (!date) {
-            	alert('Please enter date')
-            	return;
-            }
-
-            if (!isValidDate(date)) {
-	            alert('Please enter valid date')
-	            return;
-            }
-
-		    $('#dateFixBlock').append(
-			    `<div class="row dateFixRow">
-                    <div class="column column-offset-25 column-10">
-                        <input max="300" min="1" class="start" name="start[]" placeholder="Start" type="number" required>
-                    </div>
-                    <div class="column column-10">
-                        <input max="300" min="1" class="end" name="end[]" placeholder="End" type="number" required>
-                    </div>
-                    <div class="column column-20">
-                        <input autocomplete="off" max="300" min="1" class="date" name="date[]" required placeholder="yyyy-mm-dd" type="text">
-                    </div>
-                    <div>
-                        <button type="button" class="button button-outline deleteBtn">- Delete</button>
-
-                    </div>
-                </div>`
-		    )
-	    })
-    })();
-
-    $(document).on('click', '.deleteBtn', function (e) {
-	    $(e.target).parents('.dateFixRow').remove()
-    })
-
-    function isValidDate(dateString) {
-	    var regEx = /^\d{4}-\d{2}-\d{2}$/;
-	    return dateString.match(regEx) != null;
-    }
-
-
-
-    $("form#form").submit(function(e) {
-	    e.preventDefault();
-
-	    let dateNotValid = false;
-	    $(this).find('.date').each((i, e) => {
-	    	if (!isValidDate($(e).val())) {
-			    dateNotValid = true;
-            }
-        })
-        if (dateNotValid) {
-        	alert('Please enter valid date');
-        	return;
-        }
-
-	    var formData = new FormData(this);
-	    var files = $('#file')[0].files;
-
-	    if(files.length > 0 ) {
-		    formData.append('file', files[0]);
-	    } else  {
-	    	alert('Please choose xlsx file')
-            return;
-        }
-
-	    $.ajax({
-		    url: 'post.php',
-		    type: 'POST',
-		    data: formData,
-		    success: function (data) {
-			    $('#script').html(data)
-			    copy()
-		    },
-		    cache: false,
-		    contentType: false,
-		    processData: false
-	    });
-    });
-
-    function copy() {
-	    let textarea = document.getElementById("script");
-	    textarea.select();
-	    document.execCommand("copy");
-	    alert('Copied Successfully!');
-    }
-
-</script>
-
-
+<footer>
+    <div class="container">
+        All right reserved © <a href="http://auniik.github.io" target="_blank">Auniik</a>
+    </div>
+</footer>
+<script src="/src/assets/main.js"></script>
 </body>
 </html>

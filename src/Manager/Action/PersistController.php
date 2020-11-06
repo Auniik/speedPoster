@@ -19,9 +19,6 @@ class PersistController
 
     public function handle()
     {
-//        var_dump($this->rows);
-//        die();
-
         set_time_limit(600);
 
         $client = new Client();
@@ -39,8 +36,6 @@ class PersistController
 
                 $log = "[" . date('Y-m-d h:i:s'). "] $k - Status: Success, Code: $status " .  PHP_EOL;
 
-                        var_dump($body->getContents());
-//        die();
                 echo $log;
 
                 if ($status > 200) {

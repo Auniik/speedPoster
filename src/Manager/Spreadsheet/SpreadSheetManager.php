@@ -3,6 +3,7 @@
 namespace src\Manager\Spreadsheet;
 
 
+use Exception;
 use SimpleXLSX;
 
 class SpreadSheetManager
@@ -38,7 +39,13 @@ class SpreadSheetManager
 
     public function save()
     {
-        $this->validate();
+        try { $this->validate(); } catch (Exception $e) {
+            echo json_encode([
+                'status' => $e->getCode(),
+                'message' => $e->getMessage()
+            ]);
+            exit(412);
+        }
 
         $uploadFile = base_path('src/tmp') . date('dmyhis'). basename($this->f['file']['name']);
 
@@ -53,17 +60,16 @@ class SpreadSheetManager
     {
         $f = $this->f;
 
-
         if (!count($f)) {
-            die('file not found!');
+            throw new Exception('File not found!', 422);
         }
         if (!isset($f['file'])) {
-            die('File not found!');
+            throw new Exception('Invalid file!', 422);
         }
 
         if ($ext = pathinfo($f['file']['name'], PATHINFO_EXTENSION)) {
-            if (in_array($ext, ['xlsx'])) {
-                die('Invalid File Type!');
+            if (!in_array($ext, ['xlsx'])) {
+                throw new Exception('Invalid file type!', 422);
             }
         }
         return true;
