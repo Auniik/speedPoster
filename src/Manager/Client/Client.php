@@ -60,6 +60,8 @@ class Client
             '/webos/i'              =>  'Mobile'
         );
 
+        var_dump("<pre>$user_agent");
+
         foreach ($os_array as $regex => $value) {
             if (preg_match($regex, $user_agent)) {
                 $os_platform    =   $value;

@@ -1,4 +1,45 @@
 (function () {
+	const inputType = localStorage.getItem('input_type') || 'manual'
+
+
+
+	$('.type').click(function (e) {
+		let type = $(e.target).val();
+		localStorage.setItem('input_type', type)
+		if (type == 'manual') {
+			$('.manual-block').show()
+			$('.dateFixRow').show()
+			$('.dateFixRow').find('input').each((i, e) => {
+				$(e).attr({required: true})
+			})
+			$('.json-block').hide()
+
+			return;
+		}
+
+		if (type == 'json') {
+			$('.manual-block').hide()
+			$('.dateFixRow').hide()
+			$('.dateFixRow').find('input').each((i, e) => {
+				$(e).attr({required: false})
+			})
+			$('.json-block').show()
+			return;
+		}
+	})
+	$(`.type:radio[value=${inputType}]`).click()
+
+	$(document).on('keyup focus blur', '#json_input', function (e) {
+		if (!IsJsonString($(e.target).val())) {
+			$(e.target).css({color: 'red'})
+			$('.submitButton').attr({'disabled': true})
+		} else  {
+			$(e.target).css({color: 'black'})
+			$('.submitButton').attr({'disabled': false})
+		}
+	})
+
+
 	$('.addBtn').click( function (e) {
 		const block = $(e.target).parents('#dateFixBlock')
 		const rows = block.find('.dateFixRow');
@@ -57,22 +98,33 @@ function isValidDate(dateString) {
 	return dateString.match(regEx) != null;
 }
 
+$(document).ready(function() {
+	$(window).keydown(function(event){
+		if(event.keyCode == 13) {
+			event.preventDefault();
+			return false;
+		}
+	});
+});
 
 
 $("form#form").submit(function(e) {
 	e.preventDefault();
 
 
-	let dateNotValid = false;
-	$(this).find('.date').each((i, e) => {
-		if (!isValidDate($(e).val())) {
-			dateNotValid = true;
+	if ($('.type:checked').val() === 'manual') {
+		let dateNotValid = false;
+		$(this).find('.date').each((i, e) => {
+			if (!isValidDate($(e).val())) {
+				dateNotValid = true;
+			}
+		})
+		if (dateNotValid) {
+			alert('Please enter valid date');
+			return;
 		}
-	})
-	if (dateNotValid) {
-		alert('Please enter valid date');
-		return;
 	}
+
 
 	let formData = new FormData(this);
 	let files = $('#file')[0].files;
@@ -89,7 +141,6 @@ $("form#form").submit(function(e) {
 		type: 'POST',
 		data: formData,
 		success: function (data) {
-			console.log(data)
 			if (data.includes('{"status":4')) {
 				alert(data);
 			}
@@ -115,4 +166,14 @@ function copy() {
 	textarea.select();
 	document.execCommand("copy");
 	alert('Copied Successfully!');
+}
+
+
+function IsJsonString(str) {
+	try {
+		JSON.parse(str);
+	} catch (e) {
+		return false;
+	}
+	return true;
 }

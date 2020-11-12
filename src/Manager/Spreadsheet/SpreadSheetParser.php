@@ -49,6 +49,7 @@ class SpreadSheetParser
     public function handle(array $rows)
     {
         $this->getConfig();
+
         $callback = fn ($row, $i)  =>  array_merge(
             [
                 '_token' => "",
@@ -119,6 +120,25 @@ class SpreadSheetParser
 
     public function getConfig()
     {
+        if ($_POST['input_type'] == 'manual') {
+            $this->getManualConfig();
+        }
+
+        if ($_POST['input_type'] == 'json') {
+            $this->getJSONConfig($_POST['json_input']);
+        }
+
+    }
+
+    public function getJSONConfig($data)
+    {
+        $range = "{
+            \"ranges\": $data
+        }";
+        $this->config = json_decode($range);
+    }
+    public function getManualConfig()
+    {
         $array = [
             'ranges' => []
         ];
@@ -129,8 +149,6 @@ class SpreadSheetParser
         }
 
         $this->config =  (object)$array;
-
-//        $this->config = json_decode(file_get_contents(base_path('src') . 'config.json'));
     }
 
 }

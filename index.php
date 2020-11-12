@@ -1,12 +1,14 @@
 <?php
 
-require 'vendor/autoload.php';
-var_dump(\src\Manager\Client\Client::get_os());
-   var_dump(\src\Manager\Client\Client::get_browser());
-   var_dump(\src\Manager\Client\Client::get_device());
-   var_dump(\src\Manager\Client\Client::get_ip());
-die();
-?>
+//require 'vendor/autoload.php';
+//
+//
+//var_dump(\src\Manager\Client\Client::get_os());
+//   var_dump(\src\Manager\Client\Client::get_browser());
+//   var_dump(\src\Manager\Client\Client::get_device());
+//   var_dump(\src\Manager\Client\Client::get_ip());
+//die();
+//?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,13 +30,13 @@ die();
             padding: 8px;
             width: 70%;
         }
+
         button, input, textarea {
             box-shadow: 0 3px 11px 0 #d8d8d8;
         }
     </style>
 </head>
 <body>
-
 
 
 <!-- `.container` is main centered wrapper -->
@@ -48,15 +50,60 @@ die();
     <div class="row">
         <div class="column column-offset-25 column-75">
             <label for="file"> Choose .xlsx file here</label>
-            <input accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" class="" id="file" name="file"
+            <input accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                   class="" id="file" name="file"
                    type="file">
         </div>
     </div>
 
 
-    <form id="form" action="post.php" enctype="multipart/form-data">
+    <form id="form" action="test.php" enctype="multipart/form-data">
         <div id="dateFixBlock">
+
             <div class="row">
+                <div class="column column-offset-25 column-10">
+                    <label>
+                        <input type="radio" class="type" name="input_type" value="manual" checked>
+                        Manual
+                    </label>
+                </div>
+                <div class="column">
+                    <label>
+                        <input type="radio" class="type" name="input_type" value="json">
+                        JSON
+                    </label>
+                </div>
+            </div>
+
+            <div class="json-block">
+                <div class="row">
+                    <div class="column column-offset-25">
+                        <label> JSON </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-offset-25">
+                        <textarea
+                                style="height: 180px; width: 566px;"
+                                name="json_input"
+                                id="json_input"
+                                placeholder='[
+    {"start": 1, "end": 100, "date": "2016-02-09"},
+    {"start": 101, "end": 145, "date": "2016-03-07"},
+    {"start": 146, "end": 300, "date": "2016-03-08"}
+]'
+                        >[
+    {"start": 1, "end": 100, "date": "2016-02-09"},
+    {"start": 101, "end": 200, "date": ""},
+    {"start": 201, "end": 300, "date": ""}
+]</textarea>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row manual-block">
                 <div class="column column-offset-25 column-10">
                     <label>Start</label>
                 </div>
@@ -69,7 +116,8 @@ die();
             </div>
             <div class="row dateFixRow">
                 <div class="column column-offset-25 column-10">
-                    <input max="300" min="1" class="start" name="start[]" placeholder="Start" type="number" value="1" required>
+                    <input max="300" min="1" class="start" name="start[]" placeholder="Start" type="number" value="1"
+                           required>
                 </div>
                 <div class="column column-10">
                     <input max="300" min="1" class="end" name="end[]" placeholder="End" type="number" required>
@@ -87,25 +135,31 @@ die();
 
         </div>
 
+        <div class="row ">
+            <div class="column column-20 column-offset-25 ">
+                <label for="">Iterator starts from</label>
+                <input type="number" name="iterator_start" value="1" placeholder="Enter iterator starts from.."/>
+            </div>
+        </div>
         <div class="row">
             <div class="column column-offset-25 buttons-block">
-                <button   class="button submitButton" >Generate</button>
+                <button class="button submitButton">Generate</button>
             </div>
         </div>
     </form>
 
 
     <br>
-    <div class="row" >
-        <div class="column column-100" >
+    <div class="row">
+        <div class="column column-100">
             <div style="display: flex; justify-content: space-between">
                 <label> Script : </label>
                 <button onclick="copy()" class="button button-clear">Copy</button>
             </div>
 
             <textarea id="script"
-                    placeholder="Copy this script and paste it into console where you want to inject it..."
-                    style="height: 550px"></textarea>
+                      placeholder="Copy this script and paste it into console where you want to inject it..."
+                      style="height: 550px"></textarea>
 
         </div>
     </div>

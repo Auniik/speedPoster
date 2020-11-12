@@ -1,5 +1,4 @@
 const start = new Date().getTime();
-call_r_insert();
 function call_r_insert(i = 0) {
 	window.addEventListener('offline', () => { console.log('Network Disconnected!'); return; });
 	let serial = Number(i) + 1;
